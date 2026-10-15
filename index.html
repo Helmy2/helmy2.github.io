@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.1">
 
     <script>
         tailwind.config = {
@@ -73,14 +73,14 @@
 
             <!-- Logo -->
             <a href="#hero" class="flex items-center gap-3 group flex-shrink-0">
-                <div class="pixel-corners-sm w-9 h-9 md:w-10 md:h-10 bg-primary/15 border-2 border-primary flex items-center justify-center text-[10px] md:text-xs font-pixel text-primary group-hover:bg-primary group-hover:text-background transition-colors">
+                <div class="pixel-corners-sm w-9 h-9 md:w-10 md:h-10 bg-primary/15 border-2 border-primary flex items-center justify-center text-xs font-pixel text-primary group-hover:bg-primary group-hover:text-background transition-colors">
                     MH
                 </div>
-                <span class="hidden sm:inline font-pixel text-[10px] md:text-xs text-ink tracking-wide">HELMY.EXE</span>
+                <span class="hidden sm:inline font-pixel text-xs text-ink tracking-wide">HELMY.EXE</span>
             </a>
 
             <!-- Desktop links -->
-            <div class="desktop-nav hidden lg:flex gap-6 font-pixel text-[9px]">
+            <div class="desktop-nav hidden lg:flex gap-6 font-pixel text-[10px]">
                 <a href="#experience" class="nav-link text-ink-muted hover:text-secondary transition-colors">EXP</a>
                 <a href="#education" class="nav-link text-ink-muted hover:text-secondary transition-colors">EDU</a>
                 <a href="#projects" class="nav-link text-ink-muted hover:text-secondary transition-colors">PROJECTS</a>
@@ -92,11 +92,11 @@
             <div class="flex items-center gap-3 md:gap-5">
                 <!-- Score HUD -->
                 <div class="hidden md:flex items-center gap-1.5 font-term text-lg text-tertiary" title="You've scrolled this many arcade points">
-                    <span class="text-[9px] font-pixel text-ink-muted">SCORE</span>
+                    <span class="text-[10px] font-pixel text-ink-muted">SCORE</span>
                     <span id="score-value">000000</span>
                 </div>
                 <a href="assets/Mohamed_Helmy_Resume.pdf" download
-                    class="hidden md:inline-flex btn-arcade pixel-corners-sm bg-primary text-background px-4 py-2 text-[9px] font-pixel">
+                    class="hidden md:inline-flex btn-arcade pixel-corners-sm bg-primary text-background px-4 py-2 text-[10px] font-pixel">
                     LOAD CV
                 </a>
                 <!-- Pause / hamburger -->
@@ -107,7 +107,7 @@
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="mobile-menu font-pixel text-[10px]">
+        <div id="mobile-menu" class="mobile-menu font-pixel text-xs">
             <a href="#experience">EXP // EXPERIENCE</a>
             <a href="#education">EDU // EDUCATION</a>
             <a href="#projects">LVL 03 // PROJECTS</a>
@@ -137,16 +137,16 @@
 
                     <!-- Left: Text -->
                     <div>
-                        <p class="blink font-pixel text-[10px] text-tertiary mb-6">◆ PRESS START ◆</p>
+                        <p class="blink font-pixel text-xs text-tertiary mb-6">◆ PRESS START ◆</p>
 
-                        <h1 class="glitch-text font-pixel text-[26px] leading-[1.6] sm:text-4xl sm:leading-[1.5] md:text-5xl md:leading-[1.4] text-ink"
+                        <h1 class="glitch-text font-pixel text-[28px] leading-[1.6] sm:text-4xl sm:leading-[1.5] md:text-5xl md:leading-[1.4] text-ink"
                             data-text="MOHAMED HELMY">MOHAMED HELMY</h1>
 
                         <p class="font-term text-2xl md:text-3xl text-secondary mt-4">
                             &gt; <span id="typed-text">ANDROID ENGINEER</span><span class="term-cursor">_</span>
                         </p>
 
-                        <p class="text-ink-muted text-sm md:text-base leading-relaxed mt-6 max-w-xl">
+                        <p class="text-ink-muted text-base md:text-lg leading-relaxed mt-6 max-w-xl">
                             Android &amp; Kotlin Multiplatform engineer shipping cross-platform apps and libraries.
                             Specialized in <span class="text-ink font-medium">Jetpack Compose, modular architecture,
                             offline-first sync, and secure mobile systems.</span> Currently one save-file into a
@@ -154,11 +154,11 @@
                         </p>
 
                         <div class="flex flex-wrap gap-4 mt-10">
-                            <a href="#projects" class="btn-arcade pixel-corners-sm bg-primary text-background px-7 py-3.5 font-pixel text-[10px]">
+                            <a href="#projects" class="btn-arcade pixel-corners-sm bg-primary text-background px-7 py-3.5 font-pixel text-xs">
                                 ▶ START GAME
                             </a>
                             <a href="assets/Mohamed_Helmy_Resume.pdf" download
-                                class="btn-arcade-outline pixel-corners-sm px-7 py-3.5 font-pixel text-[10px] text-ink flex items-center gap-2">
+                                class="btn-arcade-outline pixel-corners-sm px-7 py-3.5 font-pixel text-xs text-ink flex items-center gap-2">
                                 ⭳ CONTINUE
                             </a>
                         </div>
@@ -167,32 +167,32 @@
                     <!-- Right: Character select card -->
                     <div class="justify-self-center w-full max-w-[340px]">
                         <div class="pixel-corners bg-surface border-2 border-line p-5 relative glow-primary">
-                            <p class="font-pixel text-[8px] text-tertiary text-center mb-4">— CHARACTER SELECT —</p>
+                            <p class="font-pixel text-[9px] text-tertiary text-center mb-4">— CHARACTER SELECT —</p>
                             <div class="pixel-corners-sm mx-auto w-24 h-24 bg-surface-high border-2 border-secondary flex items-center justify-center text-5xl">
                                 🤖
                             </div>
-                            <p class="font-pixel text-[10px] text-ink text-center mt-4">MOHAMED HELMY</p>
-                            <p class="font-term text-base text-ink-muted text-center mb-4">LV. 3 · ANDROID/KMP CLASS</p>
+                            <p class="font-pixel text-xs text-ink text-center mt-4">MOHAMED HELMY</p>
+                            <p class="font-term text-lg text-ink-muted text-center mb-4">LV. 3 · ANDROID/KMP CLASS</p>
 
                             <div class="space-y-2.5">
                                 <div class="stat-row">
-                                    <span class="font-pixel text-[7px] text-ink-muted">COMPOSE</span>
+                                    <span class="font-pixel text-[8px] text-ink-muted">COMPOSE</span>
                                     <div class="stat-bar"><div class="stat-fill bg-primary" style="width:95%"></div></div>
                                 </div>
                                 <div class="stat-row">
-                                    <span class="font-pixel text-[7px] text-ink-muted">KMP</span>
+                                    <span class="font-pixel text-[8px] text-ink-muted">KMP</span>
                                     <div class="stat-bar"><div class="stat-fill bg-secondary" style="width:92%"></div></div>
                                 </div>
                                 <div class="stat-row">
-                                    <span class="font-pixel text-[7px] text-ink-muted">ARCHITECTURE</span>
+                                    <span class="font-pixel text-[8px] text-ink-muted">ARCHITECTURE</span>
                                     <div class="stat-bar"><div class="stat-fill bg-tertiary" style="width:90%"></div></div>
                                 </div>
                                 <div class="stat-row">
-                                    <span class="font-pixel text-[7px] text-ink-muted">SECURITY</span>
+                                    <span class="font-pixel text-[8px] text-ink-muted">SECURITY</span>
                                     <div class="stat-bar"><div class="stat-fill bg-xp" style="width:85%"></div></div>
                                 </div>
                                 <div class="stat-row">
-                                    <span class="font-pixel text-[7px] text-ink-muted">BACKEND</span>
+                                    <span class="font-pixel text-[8px] text-ink-muted">BACKEND</span>
                                     <div class="stat-bar"><div class="stat-fill bg-primary" style="width:80%"></div></div>
                                 </div>
                             </div>
@@ -206,9 +206,9 @@
         <!-- ──────────── LEVEL 01 — EXPERIENCE ──────────── -->
         <section id="experience" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">LEVEL 01</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">QUEST LOG // EXPERIENCE</h2>
-                <p class="text-ink-muted text-sm mt-4 max-w-2xl">Every job is a quest. Here's the XP earned along the way.</p>
+                <p class="font-pixel text-xs text-tertiary mb-3">LEVEL 01</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">QUEST LOG // EXPERIENCE</h2>
+                <p class="text-ink-muted text-base mt-4 max-w-2xl">Every job is a quest. Here's the XP earned along the way.</p>
             </div>
 
             <div class="space-y-10 mt-14">
@@ -218,12 +218,12 @@
                     <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
                         <div>
                             <span class="quest-tag bg-primary/15 text-primary border border-primary">MAIN QUEST · ACTIVE</span>
-                            <h3 class="font-pixel text-sm md:text-base text-ink mt-3">AREEB TECHNOLOGY</h3>
-                            <p class="text-ink-muted text-sm mt-1">Android Software Engineer</p>
+                            <h3 class="font-pixel text-base md:text-lg text-ink mt-3">AREEB TECHNOLOGY</h3>
+                            <p class="text-ink-muted text-base mt-1">Android Software Engineer</p>
                         </div>
-                        <span class="font-term text-xl text-secondary">07/2025 → NOW</span>
+                        <span class="font-term text-2xl text-secondary">07/2025 → NOW</span>
                     </div>
-                    <ul class="space-y-2 text-sm text-ink-muted leading-relaxed mb-6">
+                    <ul class="space-y-2.5 text-base text-ink-muted leading-relaxed mb-6">
                         <li>▸ Led KMP research and validated shared logic with native UI integration under Clean Architecture, building a production-ready cross-platform blueprint adopted by multiple teams.</li>
                         <li>▸ Refactored a monolithic codebase into 24 independent modules, enabling parallel team releases with zero merge conflicts.</li>
                         <li>▸ Modernized engineering foundations by migrating to Gradle Version Catalogs and adopting Navigation 3.</li>
@@ -251,13 +251,46 @@
                 <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 reveal-item glow-primary">
                     <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
                         <div>
-                            <span class="quest-tag bg-secondary/15 text-secondary border border-secondary">SIDE QUEST · COMPLETE</span>
-                            <h3 class="font-pixel text-sm md:text-base text-ink mt-3">FREELANCE — POS &amp; ERP PLATFORM</h3>
-                            <p class="text-ink-muted text-sm mt-1">Kotlin Multiplatform Engineer</p>
+                            <span class="quest-tag bg-tertiary/15 text-tertiary border border-tertiary">CO-OP QUEST · ACTIVE</span>
+                            <h3 class="font-pixel text-base md:text-lg text-ink mt-3">NATIONAL TELECOMMUNICATION INSTITUTE (NTI)</h3>
+                            <p class="text-ink-muted text-base mt-1">Software Engineering &amp; Backend Instructor (Part-Time) · Bank Misr Program</p>
                         </div>
-                        <span class="font-term text-xl text-secondary">02/2025 → 07/2025</span>
+                        <span class="font-term text-2xl text-secondary">10/2026 → NOW</span>
                     </div>
-                    <ul class="space-y-2 text-sm text-ink-muted leading-relaxed mb-6">
+                    <ul class="space-y-2.5 text-base text-ink-muted leading-relaxed mb-6">
+                        <li>▸ Delivering an intensive backend curriculum covering Clean Code fundamentals, SOLID principles, and 16+ GoF Creational, Structural, and Behavioral design patterns.</li>
+                        <li>▸ Training developers on modern Kotlin for backend systems, emphasizing structured concurrency with Coroutines, JVM interoperability, and null safety.</li>
+                        <li>▸ Instructing enterprise Spring Boot architecture with Kotlin: Aspect-Oriented Programming (AOP), unit and integration testing using JUnit, Mockito, MockMvc, and Testcontainers.</li>
+                        <li>▸ Guiding production API design and security implementations including REST standards, JWT stateless authentication filters, OAuth2 flows, and centralized validation.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="xp-chip">CLEAN CODE &amp; PATTERNS</span>
+                        <span class="xp-chip">KOTLIN COROUTINES</span>
+                        <span class="xp-chip">SPRING BOOT &amp; AOP</span>
+                        <span class="xp-chip">JWT &amp; OAUTH2</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                        <span class="tech-tag">Design Patterns</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">OAuth2</span>
+                        <span class="tech-tag">Testcontainers</span>
+                    </div>
+                </div>
+
+                <!-- Quest 3 -->
+                <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 reveal-item glow-primary">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <div>
+                            <span class="quest-tag bg-secondary/15 text-secondary border border-secondary">SIDE QUEST · COMPLETE</span>
+                            <h3 class="font-pixel text-base md:text-lg text-ink mt-3">FREELANCE — POS &amp; ERP PLATFORM</h3>
+                            <p class="text-ink-muted text-base mt-1">Kotlin Multiplatform Engineer</p>
+                        </div>
+                        <span class="font-term text-2xl text-secondary">02/2025 → 07/2025</span>
+                    </div>
+                    <ul class="space-y-2.5 text-base text-ink-muted leading-relaxed mb-6">
                         <li>▸ Enabled real-time inventory management across Android tablets and Desktop with an offline-first POS and ERP platform.</li>
                         <li>▸ Kept data flowing reliably through connectivity drops with automatic conflict resolution via Room and Supabase sync.</li>
                         <li>▸ Implemented secure RPC-based stock transfer workflows to maintain consistency across multiple warehouse locations.</li>
@@ -282,11 +315,34 @@
         <!-- ──────────── LEVEL 02 — EDUCATION ──────────── -->
         <section id="education" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">LEVEL 02</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">TUTORIAL STAGE // EDUCATION</h2>
+                <p class="font-pixel text-xs text-tertiary mb-3">LEVEL 02</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">TUTORIAL STAGE // EDUCATION</h2>
             </div>
 
-            <div class="max-w-3xl mx-auto mt-14 reveal-item">
+            <div class="max-w-3xl mx-auto mt-14 space-y-8 reveal-item">
+                <!-- Master's Degree -->
+                <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 glow-primary">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="pixel-corners-sm w-16 h-16 bg-primary/10 border-2 border-primary flex items-center justify-center text-3xl flex-shrink-0">
+                            🔬
+                        </div>
+                        <div class="flex-1">
+                            <span class="quest-tag bg-primary/15 text-primary border border-primary">NEW GAME+ · IN PROGRESS</span>
+                            <h3 class="font-pixel text-base md:text-lg text-ink mt-3">M.SC. IN COMPUTER SCIENCE</h3>
+                            <p class="text-ink-muted mt-2 text-base">Faculty of Computers &amp; Artificial Intelligence · Benha University · 2026 – Present</p>
+                            <p class="text-ink-muted text-base leading-relaxed mt-3">
+                                Advanced research and academic study focusing on intelligent computing, distributed systems, and software engineering.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="tech-tag">Computer Science</span>
+                                <span class="tech-tag">Distributed Systems</span>
+                                <span class="tech-tag">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
                 <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 glow-primary">
                     <div class="flex flex-col md:flex-row gap-6 items-start">
                         <div class="pixel-corners-sm w-16 h-16 bg-tertiary/10 border-2 border-tertiary flex items-center justify-center text-3xl flex-shrink-0">
@@ -294,9 +350,9 @@
                         </div>
                         <div class="flex-1">
                             <span class="quest-tag bg-tertiary/15 text-tertiary border border-tertiary">TUTORIAL COMPLETE</span>
-                            <h3 class="font-pixel text-sm md:text-base text-ink mt-3">B.SC. IN COMPUTER SCIENCE</h3>
-                            <p class="text-ink-muted mt-2">Benha University · 09/2019 – 06/2023 · GPA 3.24/4.0</p>
-                            <p class="text-ink-muted text-sm leading-relaxed mt-3">
+                            <h3 class="font-pixel text-base md:text-lg text-ink mt-3">B.SC. IN COMPUTER SCIENCE</h3>
+                            <p class="text-ink-muted mt-2 text-base">Benha University · 09/2019 – 06/2023 · GPA 3.24/4.0</p>
+                            <p class="text-ink-muted text-base leading-relaxed mt-3">
                                 Engineered a machine learning solution to predict diabetes using health metrics and
                                 classification models — the first boss fight before entering the industry.
                             </p>
@@ -314,9 +370,9 @@
         <!-- ──────────── LEVEL 03 — PROJECTS ──────────── -->
         <section id="projects" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">LEVEL 03</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">PROJECT SELECT</h2>
-                <p class="text-ink-muted text-sm mt-4 max-w-2xl">Choose your cartridge. Newest releases first — filter by genre.</p>
+                <p class="font-pixel text-xs text-tertiary mb-3">LEVEL 03</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">PROJECT SELECT</h2>
+                <p class="text-ink-muted text-base mt-4 max-w-2xl">Choose your cartridge. Newest releases first — filter by genre.</p>
             </div>
 
             <!-- Filter tabs -->
@@ -520,20 +576,21 @@
         <!-- ──────────── LEVEL 04 — SKILLS ──────────── -->
         <section id="skills" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">LEVEL 04</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">SKILL TREE // INVENTORY</h2>
-                <p class="text-ink-muted text-sm mt-4 max-w-2xl">Power-ups collected across the campaign.</p>
+                <p class="font-pixel text-xs text-tertiary mb-3">LEVEL 04</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">SKILL TREE // INVENTORY</h2>
+                <p class="text-ink-muted text-base mt-4 max-w-2xl">Power-ups collected across the campaign.</p>
             </div>
 
             <div class="space-y-8 mt-14">
                 <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 reveal-item glow-primary">
-                    <h3 class="font-pixel text-xs text-ink mb-5">📱 MOBILE &amp; CROSS-PLATFORM</h3>
+                    <h3 class="font-pixel text-sm text-ink mb-5">📱 MOBILE &amp; ARCHITECTURE</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-slot is-key">Kotlin</span>
                         <span class="skill-slot">Jetpack Compose</span>
                         <span class="skill-slot">Kotlin Multiplatform</span>
                         <span class="skill-slot">Compose Multiplatform</span>
                         <span class="skill-slot">Clean Architecture</span>
+                        <span class="skill-slot">GoF Design Patterns</span>
                         <span class="skill-slot">MVVM</span>
                         <span class="skill-slot">MVI</span>
                         <span class="skill-slot">Coroutines</span>
@@ -545,9 +602,12 @@
                 </div>
 
                 <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 reveal-item glow-primary">
-                    <h3 class="font-pixel text-xs text-ink mb-5">🛰 PLATFORM, BACKEND &amp; SECURITY</h3>
+                    <h3 class="font-pixel text-sm text-ink mb-5">🛰 PLATFORM, BACKEND &amp; SECURITY</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-slot is-key">Ktor</span>
+                        <span class="skill-slot">Spring Boot</span>
+                        <span class="skill-slot">JWT</span>
+                        <span class="skill-slot">OAuth2</span>
                         <span class="skill-slot">Koin</span>
                         <span class="skill-slot">Room</span>
                         <span class="skill-slot">Swift</span>
@@ -564,7 +624,7 @@
                 </div>
 
                 <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 reveal-item glow-primary">
-                    <h3 class="font-pixel text-xs text-ink mb-5">🛠 TOOLS &amp; TESTING</h3>
+                    <h3 class="font-pixel text-sm text-ink mb-5">🛠 TOOLS &amp; TESTING</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-slot is-key">Git</span>
                         <span class="skill-slot">GitHub Actions</span>
@@ -573,19 +633,21 @@
                         <span class="skill-slot">Version Catalogs</span>
                         <span class="skill-slot">JUnit</span>
                         <span class="skill-slot">Mockito / Mokkery</span>
+                        <span class="skill-slot">Testcontainers</span>
                         <span class="skill-slot">Compose UI Testing</span>
                         <span class="skill-slot">Screenshot Testing</span>
                         <span class="skill-slot">Maestro</span>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- ──────────── ACHIEVEMENTS — CERTIFICATIONS ──────────── -->
         <section id="achievements" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">BONUS STAGE</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">ACHIEVEMENTS UNLOCKED</h2>
+                <p class="font-pixel text-xs text-tertiary mb-3">BONUS STAGE</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">ACHIEVEMENTS UNLOCKED</h2>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-14">
@@ -644,9 +706,9 @@
         <!-- ──────────── SIDE QUEST — HOBBIES ──────────── -->
         <section id="hobbies" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">SIDE QUEST</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">OFF THE CLOCK</h2>
-                <p class="text-ink-muted text-sm mt-4 max-w-2xl">The stats that don't go on a resume.</p>
+                <p class="font-pixel text-xs text-tertiary mb-3">SIDE QUEST</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">OFF THE CLOCK</h2>
+                <p class="text-ink-muted text-base mt-4 max-w-2xl">The stats that don't go on a resume.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14">
@@ -677,16 +739,16 @@
         <!-- ──────────── FINAL STAGE — CONTACT ──────────── -->
         <section id="contact" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
             <div class="level-header reveal-item">
-                <p class="font-pixel text-[10px] text-tertiary mb-3">FINAL STAGE</p>
-                <h2 class="font-pixel text-xl md:text-3xl text-ink leading-relaxed">CONTINUE?</h2>
-                <p class="text-ink-muted text-sm mt-4 max-w-2xl">Insert coin to start a new project together.</p>
+                <p class="font-pixel text-xs text-tertiary mb-3">FINAL STAGE</p>
+                <h2 class="font-pixel text-2xl md:text-4xl text-ink leading-relaxed">CONTINUE?</h2>
+                <p class="text-ink-muted text-base mt-4 max-w-2xl">Insert coin to start a new project together.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-14 reveal-item">
 
                 <!-- Info menu -->
                 <div class="pixel-corners bg-surface border-2 border-line p-6 md:p-8 glow-primary">
-                    <p class="font-pixel text-[10px] text-secondary mb-6">— SELECT AN OPTION —</p>
+                    <p class="font-pixel text-xs text-secondary mb-6">— SELECT AN OPTION —</p>
                     <div class="space-y-1">
                         <a href="mailto:mohelmy.eng@gmail.com" class="contact-row">
                             <span class="contact-row-arrow">▸</span> mohelmy.eng@gmail.com
@@ -720,12 +782,12 @@
 
                 <!-- Big CTA -->
                 <div class="pixel-corners bg-primary/10 border-2 border-primary p-6 md:p-8 flex flex-col justify-center items-start glow-primary">
-                    <p class="font-pixel text-[10px] text-primary mb-4">1UP</p>
-                    <h3 class="font-pixel text-sm md:text-base text-ink leading-relaxed mb-4">READY PLAYER TWO?</h3>
-                    <p class="text-ink-muted text-sm leading-relaxed mb-6">
+                    <p class="font-pixel text-xs text-primary mb-4">1UP</p>
+                    <h3 class="font-pixel text-base md:text-lg text-ink leading-relaxed mb-4">READY PLAYER TWO?</h3>
+                    <p class="text-ink-muted text-base leading-relaxed mb-6">
                         Got an Android or Kotlin Multiplatform project that needs a co-op partner? Let's team up.
                     </p>
-                    <a href="mailto:mohelmy.eng@gmail.com" class="btn-arcade pixel-corners-sm bg-primary text-background px-7 py-3.5 font-pixel text-[10px]">
+                    <a href="mailto:mohelmy.eng@gmail.com" class="btn-arcade pixel-corners-sm bg-primary text-background px-7 py-3.5 font-pixel text-xs">
                         ▶ SEND MESSAGE
                     </a>
                 </div>
@@ -737,7 +799,7 @@
 
     <!-- ═══════════════════ FOOTER ═══════════════════ -->
     <footer class="border-t-2 border-line py-8 text-center">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 font-pixel text-[9px] text-ink-muted">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 font-pixel text-[10px] text-ink-muted">
             <span>© 2026 MOHAMED HELMY — GAME OVER? <span class="text-secondary">CONTINUE</span></span>
             <div class="flex gap-6">
                 <a href="https://github.com/helmy2" target="_blank" rel="noopener" class="hover:text-secondary transition-colors">GITHUB</a>
@@ -748,10 +810,10 @@
     </footer>
 
     <!-- ═══════════════════ SCROLL-TO-TOP ═══════════════════ -->
-    <button id="scroll-top" class="pixel-corners-sm font-pixel text-[8px]" aria-label="Scroll to top">▲<br>TOP</button>
+    <button id="scroll-top" class="pixel-corners-sm font-pixel text-[9px]" aria-label="Scroll to top">▲<br>TOP</button>
 
     <!-- ═══════════════════ MAIN JS ═══════════════════ -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=1.2"></script>
 
 </body>
 

@@ -51,6 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav .desktop-nav a[href^="#"]');
 
+    // Immediate visual feedback on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('nav-active'));
+            link.classList.add('nav-active');
+        });
+    });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -96,8 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btn) btn.classList.toggle('visible', window.scrollY > 400);
         if (scoreEl) {
             const max = document.documentElement.scrollHeight - window.innerHeight;
-            const pct = max > 0 ? window.scrollY / max : 0;
-            scoreEl.textContent = String(Math.floor(pct * 999999)).padStart(6, '0');
+            const pct = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+            const isBottom = max <= 0 || (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) || pct >= 1;
+            const score = isBottom ? 999999 : Math.min(999999, Math.floor(pct * 999999));
+            scoreEl.textContent = String(score).padStart(6, '0');
         }
         ticking = false;
     }
@@ -108,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }
     }, { passive: true });
+
+    window.addEventListener('resize', onScroll, { passive: true });
 
     if (btn) {
         btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -163,3 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => toast.remove(), 3500);
     }
 })();
+
+/* ─── Cleanup any legacy scale settings ────────────────────────────── */
+try {
+    localStorage.removeItem('portfolio_scale');
+    document.documentElement.style.zoom = '';
+} catch (e) {}
+
+
