@@ -1,3 +1,31 @@
+/* ─── Self-Hosted Fonts ────────────────────────────────────────── */
+@font-face {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/press-start-2p.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'VT323';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/vt323.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url('../assets/fonts/jetbrains-mono.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ─── Base & Reset ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -225,23 +253,35 @@ body {
 .retro-grid {
     position: absolute;
     inset: -10% -10% 0 -10%;
-    background-image:
-        linear-gradient(rgba(255, 46, 154, 0.18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 46, 154, 0.18) 1px, transparent 1px);
-    background-size: 48px 48px;
     transform: perspective(500px) rotateX(60deg);
     transform-origin: bottom;
     height: 60%;
     top: auto;
     bottom: 0;
+    overflow: hidden;
     mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 90%);
-    animation: gridScroll 8s linear infinite;
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 90%);
     opacity: 0.5;
     z-index: 0;
+    pointer-events: none;
+}
+.retro-grid::before {
+    content: "";
+    position: absolute;
+    top: -48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(255, 46, 154, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 46, 154, 0.18) 1px, transparent 1px);
+    background-size: 48px 48px;
+    will-change: transform;
+    animation: gridScroll 8s linear infinite;
 }
 @keyframes gridScroll {
-    from { background-position: 0 0; }
-    to { background-position: 0 48px; }
+    from { transform: translateY(0); }
+    to { transform: translateY(48px); }
 }
 
 .blink { animation: blink 1.2s step-end infinite; }

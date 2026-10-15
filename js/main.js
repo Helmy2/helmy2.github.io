@@ -9,8 +9,8 @@
         'CROSS-PLATFORM SHIPPER',
     ];
     let phraseIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
+    let charIndex = phrases[0].length;
+    let deleting = true;
     const el = document.getElementById('typed-text');
     if (!el) return;
 
@@ -30,7 +30,7 @@
         }
         setTimeout(type, delay);
     }
-    type();
+    setTimeout(type, 1800);
 })();
 
 /* ─── Scroll reveal observer ───────────────────────────────────────── */

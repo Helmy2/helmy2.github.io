@@ -40,6 +40,11 @@ sync_pdf() {
     fi
 }
 
+build_css() {
+    echo "==> Compiling optimized production Tailwind CSS..."
+    (cd "$PORTFOLIO_DIR" && npx -y tailwindcss@3 -c "$PORTFOLIO_DIR/tailwind.config.js" -i "$PORTFOLIO_DIR/css/tailwind-input.css" -o "$PORTFOLIO_DIR/css/tailwind.min.css" --minify)
+}
+
 case "$CMD" in
     status)
         echo "=== Portfolio Status ==="
@@ -49,7 +54,12 @@ case "$CMD" in
         git -C "$PORTFOLIO_DIR" status -s
         ;;
 
+    build)
+        build_css
+        ;;
+
     preview)
+        build_css
         PORT="${2:-4173}"
         echo "🚀 Starting local server at http://localhost:$PORT"
         echo "Press Ctrl+C to stop."
@@ -71,6 +81,9 @@ case "$CMD" in
             sync_pdf
         fi
 
+        # Build production CSS
+        build_css
+
         cd "$PORTFOLIO_DIR"
         
         if [ -z "$(git status --porcelain)" ]; then
@@ -90,7 +103,7 @@ case "$CMD" in
         ;;
 
     *)
-        echo "Usage: bash portfolio/deploy.sh [status|preview|sync-cv|deploy [message]]"
+        echo "Usage: bash portfolio/deploy.sh [status|build|preview|sync-cv|deploy [message]]"
         exit 1
         ;;
 esac

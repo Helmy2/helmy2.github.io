@@ -1,0 +1,13 @@
+{
+  "name": "helmy-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mohamed Helmy - Portfolio Website",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind.min.css --minify",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -22,54 +22,13 @@
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%95%B9%EF%B8%8F%3C/text%3E%3C/svg%3E">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.1">
+    <!-- Preload Critical Display Fonts to eliminate CLS and FOUT -->
+    <link rel="preload" href="assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/vt323.woff2" as="font" type="font/woff2" crossorigin>
 
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#FF2E9A",
-                        secondary: "#29F1FF",
-                        tertiary: "#FFE24C",
-                        xp: "#4CFF7A",
-                        background: "#0B0714",
-                        surface: "#150C29",
-                        "surface-high": "#1D1238",
-                        "surface-low": "#0E081C",
-                        ink: "#ECE7FB",
-                        "ink-muted": "#A79BD1",
-                        line: "#3A2A5C",
-                    },
-                    borderRadius: {
-                        DEFAULT: "0px",
-                        lg: "0px",
-                        xl: "0px",
-                        full: "9999px",
-                    },
-                    spacing: {
-                        "margin-mobile": "20px",
-                        "margin-desktop": "64px",
-                        "container-max": "1200px",
-                        "section-gap": "96px",
-                    },
-                    fontFamily: {
-                        pixel: ["'Press Start 2P'", "monospace"],
-                        term: ["'VT323'", "monospace"],
-                        mono: ["'JetBrains Mono'", "monospace"],
-                    },
-                },
-            },
-        }
-    </script>
+    <!-- Production Stylesheets -->
+    <link rel="stylesheet" href="css/tailwind.min.css?v=2.0">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
 </head>
 
 <body class="bg-background text-ink antialiased font-mono">
@@ -180,8 +139,11 @@
                     <div class="justify-self-center w-full max-w-[340px]">
                         <div class="pixel-corners bg-surface border-2 border-line p-5 relative glow-primary">
                             <p class="font-pixel text-[9px] text-tertiary text-center mb-4">— CHARACTER SELECT —</p>
-                            <div class="pixel-corners-sm mx-auto w-28 h-28 sm:w-32 sm:h-32 bg-surface-high border-2 border-secondary relative overflow-hidden group shadow-[0_0_20px_rgba(41,241,255,0.25)]">
-                                <img src="assets/profile.jpg" alt="Mohamed Helmy" class="w-full h-full object-cover object-[center_18%] transition-transform duration-300 group-hover:scale-105" />
+                            <div class="pixel-corners-sm mx-auto w-28 h-28 sm:w-32 sm:h-32 bg-surface-high border-2 border-secondary relative overflow-hidden group shadow-[0_0_20px_rgba(41,241,255,0.25)] aspect-square">
+                                <picture>
+                                    <source srcset="assets/profile.webp" type="image/webp">
+                                    <img src="assets/profile.jpg" alt="Mohamed Helmy" width="128" height="128" fetchpriority="high" class="w-full h-full object-cover object-[center_18%] transition-transform duration-300 group-hover:scale-105" />
+                                </picture>
                                 <div class="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                             <p class="font-pixel text-xs text-ink text-center mt-4">MOHAMED HELMY</p>
