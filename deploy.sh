@@ -86,7 +86,7 @@ case "$CMD" in
         git push origin main
         echo ""
         echo "🎉 Successfully deployed! Your changes will be live shortly at:"
-        echo "   https://helmy2.github.io/"
+        echo "   https://helmy.is-a.dev/ (redirects from https://helmy2.github.io/)"
         ;;
 
     *)
